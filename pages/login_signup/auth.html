@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="auth.css">
     <title>whoami</title>
 </head>
@@ -15,7 +19,7 @@
                 <h1>Login</h1>
                 <!-- <hr> -->
             </div>
-            <form action="#" method="post">
+            <form action="#" method="post" id="login-form">
                 <label for="login-email">Email</label>
                 <input type="email" placeholder="abc@xyz.com" name="email" required id="login-email">
                 <label for="login-password">Password</label>
@@ -29,7 +33,7 @@
                 <h1>Sign up</h1>
                 <!-- <hr> -->
             </div>
-            <form action="#" method="post">
+            <form action="#" method="post" id="signup-form">
                 <label for="signup-email"> Email</label>
                 <input id="signup-email" type="email" placeholder="abc@xyz.com" name="email" required>
                 <label for="sigup-password">Password</label>
@@ -43,6 +47,7 @@
             </form>
         </div>
     </main>
+    <script src="auth.js" defer></script>
 </body>
 
 </html>
