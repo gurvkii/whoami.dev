@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    /* CSS HEX */
+    --cotton-rose: #E5BDBDff;
+    --sky-blue: #94CDF7ff;
+    --periwinkle: #C2C2EDff;
+    --blue-slate: #5C6977ff;
+    --white: #FFFFFFff;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--blue-slate);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    height: 100vh;
+}
+
+.login {
+    background-color: var(--periwinkle);
+    border: 4px solid var(--blue-slate);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 0px 0px var(--blue-slate);
+    padding: 42px 40px 36px;
+    height: 500px;
+}
+
+.heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.signup {
+    background-color: var(--sky-blue);
+    border: 4px solid var(--blue-slate);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 0px 0px var(--blue-slate);
+    padding: 42px 40px 36px;
+    height: 500px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login input {
+    padding: 0.6rem;
+    margin: 0.5rem;
+    border: 2px solid var(--blue-slate);
+    box-shadow: 3px 3px 0px 0px var(--blue-slate);
+    border-radius: 0.6rem;
+    width: 250px;
+}
+
+.signup input {
+    padding: 0.6rem;
+    margin: 0.5rem;
+    border: 2px solid var(--blue-slate);
+    box-shadow: 3px 3px 0px 0px var(--blue-slate);
+    border-radius: 0.6rem;
+    width: 250px;
+}
+
+
+/* hr{
+    width: 40px;
+    height: 8px;
+    background-color: var(--cotton-rose);
+    border: 1px solid var(--blue-slate);
+    border-radius: 4px;
+} */
+
+
+button {
+    background-color: var(--cotton-rose);
+    border: 2px solid var(--blue-slate);
+    border-radius: 6px;
+    padding: 0.6rem;
+    box-shadow: 3px 3px 0px 0px var(--blue-slate);
+    margin: 1rem;
+    font-size: 16px;
+    font-weight: bolder;
+    color: var(--blue-slate);
+}
+
+
+label {
+    font-size: 1.1rem;
+    font-weight:500;
+    margin: 0.2rem;
+}

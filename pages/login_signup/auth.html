@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="auth.css">
     <title>whoami</title>
 </head>
 
 <body>
     <main>
-        <div class="login">
+        <div class="login" id="login">
             <div class="heading">
                 <h1>Login</h1>
+                <!-- <hr> -->
             </div>
-            <form action="submit">
+            <form action="#" method="post">
                 <label for="login-email">Email</label>
                 <input type="email" placeholder="abc@xyz.com" name="email" required id="login-email">
                 <label for="login-password">Password</label>
@@ -22,17 +24,20 @@
                 <p> Don't have an account? <a href="#login">signup</a> </p>
             </form>
         </div>
-        <div class="signup">
+        <div class="signup" id="signup">
             <div class="heading">
                 <h1>Sign up</h1>
+                <!-- <hr> -->
             </div>
-            <form action="submit">
+            <form action="#" method="post">
                 <label for="signup-email"> Email</label>
                 <input id="signup-email" type="email" placeholder="abc@xyz.com" name="email" required>
                 <label for="sigup-password">Password</label>
-                <input id="signup-password" type="password" name="password" placeholder="Enter your Password" name="password" required>
+                <input id="signup-password" type="password" name="password" placeholder="Enter your Password"
+                    name="password" required>
                 <label for="signup-confirm-password">Confirm your password</label>
-                <input id="signup-confirm-password" type="password" name="confirm-password" placeholder="Confirm your password" required>
+                <input id="signup-confirm-password" type="password" name="confirm-password"
+                    placeholder="Confirm your password" required>
                 <button type="submit">Signup</button>
                 <p> Already have an account? <a href="#login">Login</a> </p>
             </form>
