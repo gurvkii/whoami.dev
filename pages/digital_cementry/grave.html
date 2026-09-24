@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grave.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Birthstone&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <title>CEMETERY</title>
+</head>
+
+<body>
+    <!-- 
+├── id
+├── name
+├── birthDate
+├── deathDate
+├── epitaph
+├── causeOfDeath
+├── description
+├── image
+└── createdAt
+ -->
+    <main>
+        <div class="nav">
+            <h1>DIGITAL CEMETERY</h1>
+            <button class="addBtn" id="addBtn">Add Grave</button>
+        </div>
+        <div class="cemetery">
+            <img src="../../assets/img/gruvkii_whoami.png" alt="grave" class="grave" id="01">
+            <img src="../../assets/img/gruvkii_whoami.png" alt="grave" class="grave" id="02">
+            <img src="../../assets/img/gruvkii_whoami.png" alt="grave" class="grave" id="03">
+            <img src="../../assets/img/gruvkii_whoami.png" alt="grave" class="grave" id="04">
+            <img src="../../assets/img/gruvkii_whoami.png" alt="grave" class="grave" id="05">
+        </div>
+    </main>
+
+    <dialog id="addform">
+        <form method="dialog">
+
+            <label for="addName">Name</label>
+            <input id="addName" type="text" placeholder="Name">
+
+            <label for="addBirthDate">Birth Date</label>
+            <input id="addBirthDate" type="date">
+
+            <label for="addDeathDate">Death Date</label>
+            <input id="addDeathDate" type="date">
+
+            <label for="addEpitaph">Epitaph</label>
+            <input id="addEpitaph" type="text">
+
+            <label for="addDesc">Description</label>
+            <textarea id="addDesc" placeholder="Description"></textarea>
+
+            <label for="addImg">Upload Image</label>
+            <input id="addImg" type="file" accept="image/*">
+
+            <button type="submit">Add</button>
+            <button type="button" id="closeBtn">Cancel</button>
+
+        </form>
+    </dialog>
+    <script src="grave.js"></script>
+</body>
+
+</html>
