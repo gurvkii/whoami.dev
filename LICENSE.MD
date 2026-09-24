@@ -1,0 +1,1 @@
+The art, assets, and other creative materials included in this repository may not be used, reproduced, modified, distributed, or otherwise exploited for personal or commercial purposes without explicit permission from the copyright holder.

@@ -18,15 +18,12 @@
  * buttons:
  *   Increased height and improved interaction feedback.
  *
- * decorations:
- *   Added background shapes using body::before and body::after.
- *   Added numbered badges using card::before.
- *
  * animation:
  *   Changed rotate to transform for smoother card movement.
  *   Added reduced-motion support.
  *
  */
+
 
 * {
     box-sizing: border-box;
@@ -56,34 +53,6 @@ body {
 
 
 
-body::before {
-    content: "";
-    position: fixed;
-    width: 330px;
-    height: 330px;
-    top: -150px;
-    left: -40px;
-    background-color: var(--sky-blue);
-    border: 3px solid var(--blue-slate);
-    border-radius: 50%;
-    z-index: -1;
-}
-
-body::after {
-    content: "";
-    position: fixed;
-    width: 180px;
-    height: 180px;
-    right: -90px;
-    bottom: -90px;
-    background-color: var(--cotton-rose);
-    border: 3px solid var(--blue-slate);
-    border-radius: 2rem;
-    transform: rotate(18deg);
-    z-index: -1;
-}
-
-
 
 main {
     display: flex;
@@ -96,6 +65,42 @@ main {
 }
 
 
+.flip-card {
+    width: 420px;
+    min-height: 600px;
+    perspective: 1200px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    transform-style: preserve-3d;
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.flip-card-front {
+    position: relative;
+}
+
+.flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
 .login {
     position: relative;
     width: 420px;
@@ -105,14 +110,13 @@ main {
     border: 3px solid var(--blue-slate);
     border-radius: 1.2rem;
     box-shadow: 9px 10px 0 var(--blue-slate);
-    transform: rotate(-2.5deg);
     transition:
         transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
         box-shadow 0.3s ease;
 }
 
 .signup {
-    position: relative;
+    position: absolute;
     width: 420px;
     min-height: 600px;
     padding: 42px 40px 36px;
@@ -120,22 +124,11 @@ main {
     border: 3px solid var(--blue-slate);
     border-radius: 1.2rem;
     box-shadow: 9px 10px 0 var(--blue-slate);
-    transform: rotate(2.5deg);
+    transform: rotateY(180deg);
     transition:
         transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
         box-shadow 0.3s ease;
 }
-
-.signup:hover {
-    transform: rotate(1deg) translateY(-5px);
-    box-shadow: 10px 13px 0 var(--blue-slate);
-}
-
-.login:hover {
-    transform: rotate(-1deg) translateY(-5px);
-    box-shadow: 10px 13px 0 var(--blue-slate);
-}
-
 
 
 .login::before,
@@ -162,7 +155,6 @@ main {
 }
 
 
-
 .heading {
     margin-bottom: 1.5rem;
 }
@@ -174,7 +166,6 @@ main {
     letter-spacing: -0.06em;
 }
 
-
 .heading::after {
     content: "";
     display: block;
@@ -185,7 +176,6 @@ main {
     border: 2px solid var(--blue-slate);
     border-radius: 999px;
 }
-
 
 
 form {
@@ -235,8 +225,6 @@ label {
 }
 
 
-
-
 button {
     width: 100%;
     height: 55px;
@@ -272,14 +260,12 @@ button:focus-visible {
 }
 
 
-
 form p {
     margin-top: 0.7rem;
     text-align: center;
     font-size: 0.9rem;
     line-height: 1.4;
 }
-
 
 
 form a {
@@ -295,7 +281,6 @@ form a:hover {
 }
 
 
-
 @media (prefers-reduced-motion: reduce) {
 
     *,
@@ -304,8 +289,15 @@ form a:hover {
         transition-duration: 0.01ms !important;
     }
 
-    .login,
-    .signup {
-        transform: none;
+    .flip-card-inner {
+        transition-duration: 0.01ms !important;
     }
+}
+
+
+.gruvkii_wave {
+    width: 200px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }

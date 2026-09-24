@@ -4,50 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="auth.css">
+
     <title>whoami</title>
 </head>
 
 <body>
+
     <main>
-        <div class="login" id="login">
-            <div class="heading">
-                <h1>Login</h1>
-                <!-- <hr> -->
+
+        <div class="flip-card" id="flip-card">
+            <div class="flip-card-inner">
+                <div class="login flip-card-front" id="login">
+                    <div class="heading">
+                        <h1>Login</h1>
+                    </div>
+                    <form action="#" method="post" id="login-form">
+
+                        <label for="login-email">Email</label>
+                        <input type="email" placeholder="abc@xyz.com" name="email" required id="login-email">
+
+                        <label for="login-password">Password</label>
+                        <input id="login-password" type="password" placeholder="Enter your Password" name="password"
+                            required>
+
+                        <button type="submit">Login</button>
+
+                        <p>
+                            Don't have an account?
+                            <a href="#" class="flip-trigger">signup</a>
+                        </p>
+
+                    </form>
+
+                </div>
+
+
+                <div class="signup flip-card-back" id="signup">
+
+                    <div class="heading">
+                        <h1>Sign up</h1>
+                    </div>
+
+                    <form action="#" method="post" id="signup-form">
+
+                        <label for="signup-email">Email</label>
+                        <input id="signup-email" type="email" placeholder="abc@xyz.com" name="email" required>
+
+                        <label for="signup-password">Password</label>
+                        <input id="signup-password" type="password" name="password" placeholder="Enter your Password"
+                            required>
+
+                        <label for="signup-confirm-password">
+                            Confirm your password
+                        </label>
+
+                        <input id="signup-confirm-password" type="password" name="confirm-password"
+                            placeholder="Confirm your password" required>
+
+                        <button type="submit">Signup</button>
+
+                        <p>
+                            Already have an account?
+                            <a href="#" class="flip-trigger">Login</a>
+                        </p>
+
+                    </form>
+
+                </div>
+
             </div>
-            <form action="#" method="post" id="login-form">
-                <label for="login-email">Email</label>
-                <input type="email" placeholder="abc@xyz.com" name="email" required id="login-email">
-                <label for="login-password">Password</label>
-                <input id="login-password" type="password" placeholder="Enter your Password" name="password" required>
-                <button type="submit">Login</button>
-                <p> Don't have an account? <a href="#login">signup</a> </p>
-            </form>
+
         </div>
-        <div class="signup" id="signup">
-            <div class="heading">
-                <h1>Sign up</h1>
-                <!-- <hr> -->
-            </div>
-            <form action="#" method="post" id="signup-form">
-                <label for="signup-email"> Email</label>
-                <input id="signup-email" type="email" placeholder="abc@xyz.com" name="email" required>
-                <label for="sigup-password">Password</label>
-                <input id="signup-password" type="password" name="password" placeholder="Enter your Password"
-                    name="password" required>
-                <label for="signup-confirm-password">Confirm your password</label>
-                <input id="signup-confirm-password" type="password" name="confirm-password"
-                    placeholder="Confirm your password" required>
-                <button type="submit">Signup</button>
-                <p> Already have an account? <a href="#login">Login</a> </p>
-            </form>
-        </div>
+
     </main>
+    <img src="../../assets/img/gruvkii_whoami_transparent.png" class="gruvkii_wave">
     <script src="auth.js" defer></script>
+
 </body>
 
 </html>
