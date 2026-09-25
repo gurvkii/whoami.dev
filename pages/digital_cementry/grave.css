@@ -135,3 +135,75 @@ textarea {
     font-family: inherit;
     border: 3px solid var(--blue-slate);
 }
+
+#graveDialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 420px;
+    min-height: 300px;
+    padding: 35px 35px 30px;
+    background-color: var(--periwinkle);
+    color: var(--blue-slate);
+    border: 3px solid var(--blue-slate);
+    border-radius: 1.2rem;
+    box-shadow: 9px 10px 0 var(--blue-slate);
+    transform: translate(-50%, -50%);
+}
+
+#graveDialog::backdrop {
+    background-color: rgba(92, 105, 119, 0.45);
+}
+
+.dialog-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.dialog-card h2 {
+    font-family: "Birthstone", cursive;
+    font-size: 2.5rem;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.3rem;
+}
+
+.dialog-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#dialogDate {
+    font-weight: 600;
+}
+
+#dialogEpitaph {
+    padding: 0.3rem;
+    margin-top: 0.2rem;
+    background-color: var(--white);
+    border: 2px solid var(--blue-slate);
+    border-radius: 5px;
+    box-shadow: 3px 3px 0 var(--blue-slate);
+}
+
+
+
+#closeDialog {
+    align-self: flex-start;
+    width: 85px;
+    height: 32px;
+    margin-top: 1rem;
+    border-radius: 0.45rem;
+    border: 3px solid var(--blue-slate);
+    background-color: var(--cotton-rose);
+    color: var(--blue-slate);
+    font-family: inherit;
+    font-weight: 700;
+    box-shadow: 3px 3px 0 var(--blue-slate);
+    cursor: pointer;
+}
+
+#closeDialog:active {
+    transform: translate(3px, 3px);
+    box-shadow: none;
+}

@@ -39,7 +39,7 @@
         <form method="dialog" id="graveForm">
 
             <label for="graveName">Name</label>
-            <input id="graveName" type="text">
+            <input id="graveName" type="text" required>
 
             <label for="graveDeathDate">Death Date</label>
             <input id="graveDeathDate" type="date">
@@ -52,7 +52,8 @@
             <!-- 
             <label for="graveImage">Upload Image</label>
             <input id="graveImage" type="file" accept="image/*"> -->
-
+            <label for="graveIMG">Image URL</label>
+            <input id="graveIMG" type="url" placeholder="https://example.com/image.jpg">
             <div class="form_btns">
                 <button type="submit">Add</button>
                 <button type="button" id="closeBtn">Cancel</button>
@@ -62,15 +63,14 @@
     </dialog>
 
     <dialog id="graveDialog">
-
         <div class="dialog-card">
             <h2 id="dialogName"></h2>
+            <img src="" alt="" id="dialogIMG">
             <p id="dialogDate"></p>
+            <p id="dialogDesc"></p>
             <p id="dialogEpitaph"></p>
-
             <button id="closeDialog">Close</button>
         </div>
-
     </dialog>
     <script src="grave.js"></script>
 </body>
