@@ -20,7 +20,7 @@ body {
     overflow: hidden;
 }
 
-.grave {
+img {
     width: 80px;
 }
 
@@ -121,4 +121,17 @@ textarea {
     border: 2px solid var(--blue-slate);
     border-radius: 5px;
     box-shadow: 3px 3px 0 var(--blue-slate);
+}
+
+#clearStorage {
+    width: 180px;
+    border-radius: 0.45rem;
+    font-weight: 700;
+    height: 32px;
+    box-shadow: 3px 3px 0 var(--blue-slate);
+    cursor: pointer;
+    background-color: var(--cotton-rose);
+    color: var(--blue-slate);
+    font-family: inherit;
+    border: 3px solid var(--blue-slate);
 }

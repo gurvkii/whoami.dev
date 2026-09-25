@@ -29,18 +29,14 @@
         <div class="nav">
             <h1>DIGITAL CEMETERY</h1>
         </div>
-        <div class="cemetery">
-            <img src="../../assets/img/gruvkii_whoami.png" alt="grave" class="grave" id="01">
-            <img src="../../assets/img/gruvkii_whoami.png" alt="grave" class="grave" id="02">
-            <img src="../../assets/img/gruvkii_whoami.png" alt="grave" class="grave" id="03">
-            <img src="../../assets/img/gruvkii_whoami.png" alt="grave" class="grave" id="04">
-            <img src="../../assets/img/gruvkii_whoami.png" alt="grave" class="grave" id="05">
+        <div class="cemetery" id="cemetery">
         </div>
         <button class="addBtn" id="addBtn">Add Grave</button>
+        <button id="clearStorage">Clear Local Storage</button>
     </main>
 
     <dialog id="addform">
-        <form method="dialog" id = "graveForm">
+        <form method="dialog" id="graveForm">
 
             <label for="graveName">Name</label>
             <input id="graveName" type="text">
@@ -53,7 +49,7 @@
 
             <label for="graveDescription">Description</label>
             <textarea id="graveDescription"></textarea>
-<!-- 
+            <!-- 
             <label for="graveImage">Upload Image</label>
             <input id="graveImage" type="file" accept="image/*"> -->
 
@@ -63,6 +59,18 @@
             </div>
 
         </form>
+    </dialog>
+
+    <dialog id="graveDialog">
+
+        <div class="dialog-card">
+            <h2 id="dialogName"></h2>
+            <p id="dialogDate"></p>
+            <p id="dialogEpitaph"></p>
+
+            <button id="closeDialog">Close</button>
+        </div>
+
     </dialog>
     <script src="grave.js"></script>
 </body>
