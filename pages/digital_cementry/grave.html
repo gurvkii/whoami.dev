@@ -40,26 +40,28 @@
     </main>
 
     <dialog id="addform">
-        <form method="dialog">
+        <form method="dialog" id = "graveForm">
 
-            <label for="addName">Name</label>
-            <input id="addName" type="text" >
+            <label for="graveName">Name</label>
+            <input id="graveName" type="text">
 
-            <label for="addDeathDate">Death Date</label>
-            <input id="addDeathDate" type="date">
+            <label for="graveDeathDate">Death Date</label>
+            <input id="graveDeathDate" type="date">
 
-            <label for="addEpitaph">Epitaph</label>
-            <input id="addEpitaph" type="text">
+            <label for="graveEpitaph">Epitaph</label>
+            <input id="graveEpitaph" type="text">
 
-            <label for="addDesc" >Description</label>
-            <textarea id="addDesc" ></textarea>
+            <label for="graveDescription">Description</label>
+            <textarea id="graveDescription"></textarea>
+<!-- 
+            <label for="graveImage">Upload Image</label>
+            <input id="graveImage" type="file" accept="image/*"> -->
 
-            <label for="addImg">Upload Image</label>
-            <input id="addImg" type="file" accept="image/*">
             <div class="form_btns">
                 <button type="submit">Add</button>
                 <button type="button" id="closeBtn">Cancel</button>
             </div>
+
         </form>
     </dialog>
     <script src="grave.js"></script>

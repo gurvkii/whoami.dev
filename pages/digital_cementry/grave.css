@@ -13,7 +13,7 @@
 }
 
 body {
-    background-color: var(--white);
+    background-color: var(--periwinkle);
     color: var(--blue-slate);
     font-family: "DM Sans", sans-serif;
     min-height: 100vh;
@@ -98,7 +98,6 @@ form {
     margin: 1rem 0rem 1rem 0rem;
     display: flex;
     gap: 1rem;
-
 }
 
 input {
