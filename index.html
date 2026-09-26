@@ -9,7 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Birthstone&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="pages/index/index.css">
     <title>Who Am I?</title>
     <script>
         document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark");
@@ -44,34 +44,7 @@
         </div>
     </div>
 
-    <script>
-        const logoutBtn = document.getElementById("logoutBtn");
-        if (logoutBtn) {
-            logoutBtn.addEventListener("click", () => {
-                localStorage.removeItem("cemetery_auth");
-                window.location.href = "pages/login_signup/auth.html";
-            });
-        }
-
-        const themeToggle = document.getElementById("themeToggle");
-        function applyTheme(theme) {
-            document.documentElement.setAttribute("data-theme", theme);
-            localStorage.setItem("theme", theme);
-            if (themeToggle) {
-                themeToggle.textContent = theme === "dark" ? "Pastel" : "Dark";
-            }
-        }
-
-        const savedTheme = localStorage.getItem("theme") || "dark";
-        applyTheme(savedTheme);
-
-        if (themeToggle) {
-            themeToggle.addEventListener("click", () => {
-                const nextTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "pastel" : "dark";
-                applyTheme(nextTheme);
-            });
-        }
-    </script>
+ <script src="pages/index/index.js"></script>
 </body>
 
 </html>
