@@ -242,25 +242,27 @@ textarea {
 }
 
 .grave-card img {
-    width: 80px;
+    width: 100px;
     pointer-events: none;
 }
 
 .grave-card p {
     color: var(--blue-slate);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     margin-top: 0.3rem;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
     word-break: break-word;
     pointer-events: none;
+
 }
 
 .grave-card.dragging {
     opacity: 0.35;
 }
 
-#logoutBtn, #homeBtn {
+#logoutBtn,
+#homeBtn {
     cursor: pointer;
     font-weight: 700;
     width: 85px;
@@ -289,12 +291,9 @@ textarea {
         transform: translateY(12px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
     }
 }
-
-
-
-

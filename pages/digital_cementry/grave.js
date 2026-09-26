@@ -79,7 +79,7 @@ function createGraveCard(grave, index) {
     graveCard.id = grave.uid;
 
     const graveImg = document.createElement("img");
-    graveImg.src = "../../assets/img/gruvkii_whoami_transparent.png";
+    graveImg.src = "../../assets/img/grave.png";
     graveImg.alt = "Grave";
 
     const graveTitle = document.createElement("p");
