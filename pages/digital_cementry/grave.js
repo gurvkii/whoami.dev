@@ -182,3 +182,17 @@ function getGraves() {
         localStorage.getItem("cemetery")
     ) || [];
 }
+
+
+const bgMusic = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+musicBtn.addEventListener("click", () => {
+    if (bgMusic.paused) {
+        bgMusic.play();
+        musicBtn.textContent = "⏸";
+    } else {
+        bgMusic.pause();
+        musicBtn.textContent = "▶";
+    }
+});

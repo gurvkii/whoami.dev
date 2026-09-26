@@ -11,12 +11,24 @@
         href="https://fonts.googleapis.com/css2?family=Birthstone&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
         rel="stylesheet">
     <title>CEMETERY</title>
+    <link rel="icon" href="../../assets/img/gruvkii_whoami.png">
 </head>
 
 <body>
+
+    <img src="../../assets/img/hand.png" alt="hand" class="hang-hand-1">
+
+    <img src="../../assets/img/hand.png" alt="hand" class="hang-hand-2">
     <main>
         <div class="nav">
             <h1>DIGITAL CEMETERY</h1>
+            <div class="audio-controller">
+                <audio id="bgMusic" loop autoplay>
+                    <source src="../../assets/mp3/spooky_audio.mp3"  >
+                </audio>
+                <button id="musicBtn" type="button">⏸</button>
+            </div>
+
         </div>
         <div class="cemetery" id="cemetery">
         </div>
@@ -62,6 +74,9 @@
             <button id="closeDialog">Close</button>
         </div>
     </dialog>
+
+    <img src="../../assets/img/pumpkin.png" alt="pumpkin-1" class="pumpkin-1">
+    <img src="../../assets/img/pumpkin.png" alt="pumpkin-2" class="pumpkin-2">
     <script src="grave.js"></script>
 </body>
 
