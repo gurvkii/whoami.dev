@@ -14,46 +14,36 @@
 </head>
 
 <body>
-    <!-- 
-├── id
-├── name
-├── birthDate
-├── deathDate
-├── epitaph
-├── causeOfDeath
-├── description
-├── image
-└── createdAt
- -->
     <main>
         <div class="nav">
             <h1>DIGITAL CEMETERY</h1>
         </div>
         <div class="cemetery" id="cemetery">
         </div>
-        <button class="addBtn" id="addBtn">Add Grave</button>
-        <button id="clearStorage">Clear Local Storage</button>
+        <div class="cemetery-controls">
+            <a href="../../index.html" id="homeBtn">Home</a>
+            <button class="addBtn" id="addBtn">Add Grave</button>
+            <button id="clearStorage">Clear Local Storage</button>
+            <button id="logoutBtn">Logout</button>
+        </div>
     </main>
 
     <dialog id="addform">
         <form method="dialog" id="graveForm">
 
             <label for="graveName">Name</label>
-            <input id="graveName" type="text" required>
+            <input id="graveName" type="text" required autocomplete="off">
 
             <label for="graveDeathDate">Death Date</label>
-            <input id="graveDeathDate" type="date">
+            <input id="graveDeathDate" type="date" autocomplete="off">
 
             <label for="graveEpitaph">Epitaph</label>
-            <input id="graveEpitaph" type="text">
+            <input id="graveEpitaph" type="text" autocomplete="off">
 
             <label for="graveDescription">Description</label>
             <textarea id="graveDescription"></textarea>
-            <!-- 
-            <label for="graveImage">Upload Image</label>
-            <input id="graveImage" type="file" accept="image/*"> -->
             <label for="graveIMG">Image URL</label>
-            <input id="graveIMG" type="url" placeholder="https://example.com/image.jpg">
+            <input id="graveIMG" type="url" placeholder="https://example.com/image.jpg" autocomplete="off">
             <div class="form_btns">
                 <button type="submit">Add</button>
                 <button type="button" id="closeBtn">Cancel</button>

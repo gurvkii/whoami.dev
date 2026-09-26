@@ -16,7 +16,7 @@ body {
     background-color: var(--periwinkle);
     color: var(--blue-slate);
     font-family: "DM Sans", sans-serif;
-    min-height: 100vh;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -207,3 +207,94 @@ textarea {
     transform: translate(3px, 3px);
     box-shadow: none;
 }
+
+.cemetery {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 4.2rem);
+    overflow: hidden;
+}
+
+.cemetery-controls {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.grave-card {
+    position: absolute;
+    width: 110px;
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: graveRise 0.25s ease-out;
+}
+
+.grave-card:active {
+    cursor: grabbing;
+}
+
+.grave-card img {
+    width: 80px;
+    pointer-events: none;
+}
+
+.grave-card p {
+    color: var(--blue-slate);
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    font-weight: 500;
+    text-align: center;
+    word-break: break-word;
+    pointer-events: none;
+}
+
+.grave-card.dragging {
+    opacity: 0.35;
+}
+
+#logoutBtn, #homeBtn {
+    cursor: pointer;
+    font-weight: 700;
+    width: 85px;
+    height: 32px;
+    color: var(--blue-slate);
+    background-color: var(--cotton-rose);
+    border: 3px solid var(--blue-slate);
+    box-shadow: 3px 3px 0 var(--blue-slate);
+    border-radius: 0.45rem;
+    font-family: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dialogIMG {
+    max-width: 120px;
+    border: 2px solid var(--blue-slate);
+    border-radius: 6px;
+    display: none;
+}
+
+@keyframes graveRise {
+    from {
+        transform: translateY(12px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
