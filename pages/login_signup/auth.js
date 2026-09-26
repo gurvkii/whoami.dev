@@ -32,14 +32,27 @@ if (loginForm) {
 
 if (signupForm) {
     signupForm.addEventListener("submit", (event) => {
-        // event.preventDefault();
-        // if (signupPasswordInput.value !== signupConfirmInput.value) {
-        //     alert("Passwords do not match");
-        //     return;
-        // }
-        // localStorage.setItem("cemetery_auth", "true");
-        // window.location.href = "../../index.html";
         alert("Signup is still on development! , Please use the provided credientials!");
-        
     });
 }
+
+const themeToggle = document.getElementById("themeToggle");
+
+function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+    if (themeToggle) {
+        themeToggle.textContent = theme === "dark" ? "Pastel" : "Dark";
+    }
+}
+
+const savedTheme = localStorage.getItem("theme") || "dark";
+applyTheme(savedTheme);
+
+if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+        const nextTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "pastel" : "dark";
+        applyTheme(nextTheme);
+    });
+}
+

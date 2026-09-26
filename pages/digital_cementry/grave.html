@@ -12,6 +12,9 @@
         rel="stylesheet">
     <title>CEMETERY</title>
     <link rel="icon" href="../../assets/img/gruvkii_whoami.png">
+    <script>
+        document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark");
+    </script>
 </head>
 
 <body>
@@ -24,7 +27,7 @@
             <h1>DIGITAL CEMETERY</h1>
             <div class="audio-controller">
                 <audio id="bgMusic" loop autoplay>
-                    <source src="../../assets/mp3/spooky_audio.mp3"  >
+                    <source src="../../assets/mp3/spooky_audio.mp3">
                 </audio>
                 <button id="musicBtn" type="button">⏸</button>
             </div>
@@ -35,6 +38,7 @@
         <div class="cemetery-controls">
             <a href="../../index.html" id="homeBtn">Home</a>
             <button class="addBtn" id="addBtn">Add Grave</button>
+            <button id="themeToggle" type="button">Theme</button>
             <button id="clearStorage">Clear Graves</button>
             <button id="logoutBtn">Logout</button>
         </div>
@@ -47,7 +51,7 @@
             <input id="graveName" type="text" required autocomplete="off">
 
             <label for="graveDeathDate">Death Date</label>
-            <input id="graveDeathDate" type="date" autocomplete="off">
+            <input id="graveDeathDate" type="date">
 
             <label for="graveEpitaph">Epitaph</label>
             <input id="graveEpitaph" type="text" autocomplete="off">

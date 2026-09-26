@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    cursor: url("../../assets/img/cursor.png") 10 10, auto;
+    /* cursor: url("../../assets/img/cursor.png") 10 10, auto; */
 
 }
 
@@ -12,6 +12,14 @@
     --periwinkle: #C2C2ED;
     --blue-slate: #5C6977;
     --white: #FFFFFF;
+}
+
+[data-theme="dark"] {
+    --cotton-rose: #782D39;
+    --sky-blue: #1E2333;
+    --periwinkle: #12111E;
+    --blue-slate: #E2E8F0;
+    --white: #1A192B;
 }
 
 body {
@@ -104,12 +112,15 @@ form {
 }
 
 input {
+    display: block;
     width: 100%;
     height: 35px;
     padding: 0.2rem 0.5rem;
     border: 2px solid var(--blue-slate);
     border-radius: 5px;
     box-shadow: 3px 3px 0 var(--blue-slate);
+    background-color: var(--white);
+    color: var(--blue-slate);
 }
 
 input::placeholder {
@@ -124,6 +135,8 @@ textarea {
     border: 2px solid var(--blue-slate);
     border-radius: 5px;
     box-shadow: 3px 3px 0 var(--blue-slate);
+    background-color: var(--white);
+    color: var(--blue-slate);
 }
 
 #clearStorage {
@@ -132,7 +145,6 @@ textarea {
     font-weight: 700;
     height: 32px;
     box-shadow: 3px 3px 0 var(--blue-slate);
-
     background-color: var(--cotton-rose);
     color: var(--blue-slate);
     font-family: inherit;
@@ -265,7 +277,8 @@ textarea {
 }
 
 #logoutBtn,
-#homeBtn {
+#homeBtn,
+#themeToggle {
     font-weight: 700;
     width: 85px;
     height: 32px;
@@ -279,6 +292,7 @@ textarea {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 #dialogIMG {
@@ -307,7 +321,7 @@ textarea {
     right: 2rem;
     height: 200px;
     width: 150px;
-    /* display: none; */
+    z-index: -1;
 }
 
 .hang-hand-2 {
@@ -316,6 +330,7 @@ textarea {
     right: 6rem;
     height: 150px;
     width: 125px;
+    z-index: -1;
 }
 
 

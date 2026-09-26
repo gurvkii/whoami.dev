@@ -12,6 +12,14 @@
     --white: #FFFFFF;
 }
 
+[data-theme="dark"] {
+    --cotton-rose: #782D39;
+    --sky-blue: #1E2333;
+    --periwinkle: #12111E;
+    --blue-slate: #E2E8F0;
+    --white: #1A192B;
+}
+
 body {
     background-color: var(--periwinkle);
     color: var(--blue-slate);
@@ -32,7 +40,8 @@ body {
     flex-shrink: 0;
 }
 
-#logoutBtn {
+#logoutBtn,
+#themeToggle {
     width: 85px;
     height: 32px;
     cursor: pointer;
@@ -42,10 +51,10 @@ body {
     background-color: var(--cotton-rose);
     border: 3px solid var(--blue-slate);
     box-shadow: 3px 3px 0 var(--blue-slate);
+    font-family: inherit;
 }
 
 .main {
-
     flex: 1;
     padding: 2rem 1rem;
     display: flex;
@@ -53,19 +62,13 @@ body {
     align-items: flex-start;
 }
 
-
-/* Card Design is stolen from my older projects */
 .cards-grid {
-
     width: 100%;
     max-width: 1400px;
     display: grid;
     grid-template-columns: repeat(4, 2fr);
     gap: 2rem;
-
 }
-
-
 
 .card-container {
     width: 100%;
@@ -146,7 +149,7 @@ body {
     color: var(--blue-slate);
     border: 1.5px dashed var(--blue-slate);
     padding: 12px;
-    background: #fbfbfd;
+    background: var(--periwinkle);
     margin-bottom: 18px;
     min-height: 90px;
     line-height: 1.45;

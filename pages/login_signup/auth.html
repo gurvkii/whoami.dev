@@ -13,9 +13,13 @@
     <link rel="stylesheet" href="auth.css">
 
     <title>whoami</title>
+    <script>
+        document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark");
+    </script>
 </head>
 
 <body>
+    <button id="themeToggle" type="button">Theme</button>
 
     <main>
 
